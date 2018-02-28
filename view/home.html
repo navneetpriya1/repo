@@ -1,0 +1,206 @@
+<!--================Slider Area =================-->
+        <section class="main_slider_area">
+           <div ng-controller="slideShowController as sctrl" class="imageslide" ng-switch='slideshow' ng-animate="'animate'">
+			<div class="slider-content" ng-switch-when="1">
+				<img src="img/icon/routers.jpg">
+                <div class="carousel-caption">
+                    <h3>{{sctrl.c11}}<br>{{sctrl.c1a}}</h3>
+                    <p>{{sctrl.c12}}</p>
+                    <p>{{sctrl.c13}}</p>
+                    <button class="btn banner-btn">{{sctrl.btn}}</button>
+                </div>
+			</div>	
+			<div class="slider-content" ng-switch-when="2">
+				<img src="img/icon/bull.jpg">
+                <div class="carousel-caption">
+                    <h3>{{sctrl.c22}}<br>{{sctrl.c2a}}</h3>
+                    <p>{{sctrl.c21}}</p>
+                    <button class="btn banner-btn">{{sctrl.btn}}</button>
+                </div>
+			</div>
+			<div class="slider-content" ng-switch-when="3">
+				<img src="img/icon/tablets.jpg">
+                <div class="carousel-caption">
+                    <h3>{{sctrl.c31}}<br>{{sctrl.c3a}}<br>{{sctrl.c3c}}</h3>
+                    <p>{{sctrl.c32}}</p>
+                    <p>{{sctrl.c3b}}</p>
+                    <button class="btn banner-btn">{{sctrl.btn}}</button>
+                </div>
+			</div>	
+		</div>
+        </section>
+    <!--================End Slider Area =================-->
+    <!--================Business segments Area =================-->
+    <section id="business">
+        <div ng-controller="businessController as bctrl">
+            <div class="container">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="left_title">
+                        <h2>{{bctrl.head}}</h2>
+                         <p>{{bctrl.para}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-xs-12 business" ng-repeat="item in bctrl.businessItem">
+                        <a ng-href="{{item.url}}">
+                        <div class= "column3">
+                            <center><img ng-src="{{item.image}}"></center>
+                        </div>
+                        <p>{{item.title}}</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================Business segments Area =================-->
+    <!--================Business and Consumer =================-->
+    <section id="bitem1">
+        <div ng-controller="b1Controller as b1ctrl">
+            <div class="container">
+                <div class="lefttitle">
+                    <h2>{{b1ctrl.head}}</h2>
+                    <p>{{b1ctrl.para1}}<br>{{b1ctrl.para2}}</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-xs-12 b-item1" ng-repeat="item in b1ctrl.businessItem">
+                       <h3 >{{item.title}}</h3>
+                       <div class="col-md-3 b-items" ng-repeat="items in item.services">
+                            <a ng-href="{{b1ctrl.url}}">
+                                <center><img ng-src="{{items.image}}"></center>
+                                <p>{{items.desc}}</p>
+                            </a>
+                            
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!--================Business and Consumer =================-->
+    <!--================Government =================-->
+    <section id="bitem2">
+        <div ng-controller="b2Controller as b2ctrl">
+            <div class="container">
+                <div class="lefttitle">
+                    <h2>{{b2ctrl.head}}</h2>
+                    <p>{{b2ctrl.para}}</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-xs-12 b-item2" ng-repeat="item in b2ctrl.b2Item">
+                        <div class= "colb2">
+                            <center><img ng-src="{{item.image}}" ></center>
+                            <p>{{item.title}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gov2">
+                    <div class="lefttitle">
+                    <h3>{{b2ctrl.head1}}</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6 b-items2" ng-repeat="items in b2ctrl.b2Items">
+                            <a ng-href="{{items.url}}">
+                                <div class= "colb2s">
+                                    <h2>{{items.titles}}</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!--================Government =================-->
+    <!--================Services =================-->
+    <section id="services">
+        <div ng-controller="serviceController as sctrl">
+            <div class="container">
+                <div class="lefttitle">
+                    <h2>{{sctrl.head}}</h2>
+                    <p>{{sctrl.para}}</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-xs-6 serve" ng-repeat="item in sctrl.sItem">
+                        <a ng-href="{{item.url}}" >
+                            <div class= "cols4">
+                                <center><img ng-src="{{item.image}}" ></center>
+                                <p>{{item.title}}</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!--================Services =================-->
+    <!--================Clients =================-->
+    <section id="client">
+        <div ng-controller="clientController as cctrl">
+            
+                <div class="lefttitle">
+                    <h2>{{cctrl.head}}</h2>
+                </div>
+                <div class="clientlogo">
+                    <img ng-src="{{cctrl.image}}">
+                </div>
+            
+        </div>
+    </section>
+    <!--================Clients =================-->
+    
+    <!--================Testimonials Area =================-->
+
+    <section class="testimonials_area testimonial_area_four">
+        <div class="container">
+            <div class="testi_inner" data-title="Client's Success Stories">
+                 <div ng-controller="testController as tctrl"  class="imageslide1" ng-switch='slideshow' ng-animate="'animate'">
+                    <div class="slider-content" ng-switch-when="1">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="media-body1 break" >
+                                    <h3>{{tctrl.text1}}</h3>
+                                    <p>{{tctrl.name1}}</p>
+                                    <p>{{tctrl.desg1}}</p>
+                                </div>
+                            </div>
+                            <div class=" col-md-5">
+                                <div class="media-body1 break1">
+                                    <h3>{{tctrl.text2}}</h3>
+                                    <p>{{tctrl.name2}}</p>
+                                    <p>{{tctrl.desg2}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="slider-content" ng-switch-when="2">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="media-body1 break">
+                                    <h3>{{tctrl.text3}}</h3>
+                                    <p>{{tctrl.name3}}</p>
+                                    <p>{{tctrl.desg3}}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="media-body1 break1">
+                                    <h3>{{tctrl.text4}}</h3>
+                                    <p>{{tctrl.name4}}</p>
+                                    <p>{{tctrl.desg4}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Testimonials Area =================-->
+
+
+
+    

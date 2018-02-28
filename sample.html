@@ -1,0 +1,132 @@
+<<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="icon" href="#" type="image/x-icon" />
+    <title>Pragyawan</title>
+    <!-- Icon css link -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendors/flat-icon/flaticon.css" rel="stylesheet">
+    <link href="vendors/stroke-icon/style.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Rev slider css -->
+    <link href="vendors/revolution/css/settings.css" rel="stylesheet">
+    <link href="vendors/revolution/css/layers.css" rel="stylesheet">
+    <link href="vendors/revolution/css/navigation.css" rel="stylesheet">
+    <link href="vendors/animate-css/animate.css" rel="stylesheet">
+    <!-- Extra plugin css -->
+    <link href="vendors/bootstrap-selector/bootstrap-select.css" rel="stylesheet">
+    <link href="vendors/owl-carousel/owl.carousel.min.css" rel="stylesheet">
+    <link href="vendors/magnify-popup/magnific-popup.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- js -->
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="js/script.js"></script>
+
+    <base href="/">
+</head>
+
+<body ng-cloak>
+	 <section id="team1">
+        <div ng-controller="team1Controller as tctrl">
+            <div class="container">
+                <div class="lefttitle">
+                    <h2 ng-bind="tctrl.head"></h2>
+                    <p ng-bind="tctrl.para"></p>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 bord" ng-repeat="member in tctrl.members track by $index">
+                        <div ng-click="member.show = !member.show ">
+                            <button id="round-{{$index}}" class="round" ng-click="showHide($index)"><img id="direction-{{$index}}" src="img/icon/uparrow.png"></button>
+                        </div>
+                        <img ng-src="{{member.image}}">
+                        <div ng-hide="member.show" class="memberabout" >
+                            <h3 ng-bind="member.title"></h3>
+                            <h2 ng-bind="member.name"></h2>     
+                        </div>            
+                        <div ng-show="member.show" class="hid" >
+                            <p ng-bind="member.about"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-2.2.4.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Rev slider js -->
+    <script src="vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="vendors/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <!-- Extra plugin js -->
+    <script src="vendors/bootstrap-selector/bootstrap-select.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="vendors/counterup/waypoints.min.js"></script>
+    <script src="vendors/counterup/jquery.counterup.min.js"></script>
+    <script src="vendors/magnify-popup/jquery.magnific-popup.min.js"></script>
+    <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="vendors/isotope/isotope.pkgd.min.js"></script>
+    <script src="vendors/skroller/skrollr.min.js"></script>
+    <script src="vendors/scroll/jquery.nicescroll.min.js"></script>
+    <!-- contact js -->
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- Javascript added -->
+<!-- 
+
+myApp.controller('team1Controller',["$scope",function ($scope){
+    var self = this;
+    self.head = 'Management Team​';
+    self.para = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo';
+    self.members = [
+        {image: 'img/icon/man.jpg', name: 'John Doe', title: 'President', about: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in id est laborum.'}, 
+        {image: 'img/icon/man.jpg', name: 'John Doe', title: 'President', about: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in id est laborum.'}, 
+        {image: 'img/icon/man.jpg', name: 'John Doe', title: 'President', about: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in id est laborum.'}, 
+        {image: 'img/icon/man.jpg', name: 'John Doe', title: 'President', about: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in id est laborum.'}, 
+        {image: 'img/icon/man.jpg', name: 'John Doe', title: 'President', about: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in id est laborum.'}, 
+        {image: 'img/icon/man.jpg', name: 'John Doe', title: 'President', about: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in id est laborum.'},  
+    ];
+
+    $scope.showHide = function(index) {
+        for (var i = index; i <= 10; i++) {
+            var down = document.getElementById('round-'+i);
+            var direction = document.getElementById('direction-'+i);
+            if (down.style.top == '71px') {
+              down.style.top = "201px";
+              direction.src = 'img/icon/uparrow.png';
+            } else {
+              down.style.top = "71px";
+              direction.src = 'img/icon/arrowdown.png';
+            }        
+            break;
+        };
+    };
+
+}]);
+ -->

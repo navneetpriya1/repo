@@ -1,0 +1,51 @@
+
+    <!--================government projects =================-->
+    <section id="govprojects">
+        <div ng-controller="projController as pctrl">
+            <div class="container">
+                <div class="lefttitle">
+                    <h2 ng-bind="pctrl.h3"></h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 key" ng-repeat="project in pctrl.projects">
+                        <div id="{{project.id}}">
+                            <h2 ng-bind="project.h2 | uppercase"></h2>
+                            <h3 ng-bind="project.h3"></h3>
+                            <div class="col-md-offset-1 ">
+                                <h4 ng-bind="project.h4"></h4>
+                            </div>
+                            <h3 ng-bind="project.ex"></h3>
+                            <div class="col-md-offset-1 ">
+                                <ul class="keys">
+                                    <span ng-repeat="example in project.keys">
+                                        <li>{{example.name}}</li>
+                                    </span>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#contactus"><button class="btn floater float-btn">Contact Us</button></a>
+    </section>
+    <hr>
+    <!--================government projects =================-->
+
+     <!--================Clients =================-->
+    <section id="client1">
+        <div ng-controller="clientController as cctrl">
+            
+                <div class="lefttitle">
+                    <h2>{{cctrl.head}}</h2>
+                </div>
+                <div class="clientlogo">
+                    <img src="img/icon/projects.png">
+                </div>
+            
+        </div>
+    </section>
+    <hr>
+    <!--================Clients =================-->
+
+   

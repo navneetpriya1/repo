@@ -1,0 +1,93 @@
+
+    <!--================service Area 1=================-->
+    <section id="serv">
+        <div ng-controller="servController as sctrl">
+            <div class="container">
+                <div class="lefttitle">
+                    <h2 ng-bind="sctrl.head"></h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 key" ng-repeat="service in sctrl.services">
+                        <div id="{{service.id}}">
+                            <h2 ng-bind="service.h2 | uppercase"></h2>
+                            <div class="sabout">
+                                <img ng-src="{{service.image}}">
+                                <h4 ng-bind="service.h4"></h4>
+                            </div>
+                            <h3 ng-bind="service.p1"></h3>
+                            <div class="col-md-offset-1 ">
+                                <ul class="keys">
+                                    <span ng-repeat="example in service.offers">
+                                        <li>{{example.name}}</li>
+                                    </span>
+                                </ul>
+                            </div>  
+                        </div>                      
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 key1" ng-repeat="service2 in sctrl.services2">
+                        <div id="{{service2.id}}">
+                            <h2 ng-bind="service2.h2 | uppercase"></h2>
+                            <div class="sabout ">
+                                <img ng-src="{{service2.image}}">
+                                <h4 ng-bind="service2.h4"></h4>
+                            </div>
+                            <h3 ng-bind="service2.p1"></h3>
+                            <div class="col-md-offset-1 ">
+                                <ul class="keys1">
+                                    <span ng-repeat="example2 in service2.offers2">
+                                        <li>{{example2.name}}</li>
+                                    </span>
+                                </ul>
+                            </div>
+                            <h3 ng-bind="service2.p2"></h3>
+                            <div class="col-md-offset-1 ">
+                                <ul class="keys1">
+                                    <span class="dif" ng-repeat="project2 in service2.projects2">
+                                        <li>{{project2.name1}}</li>
+                                    </span>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 ng-bind="service2.h3"></h3>
+                                <h4 ng-bind="service2.p3"></h4>
+                            </div>
+                        </div>
+                    </div>                   
+                </div>
+                <div class="row">
+                    <div class="col-md-12 key1" id="thirdimp" ng-repeat="serve in sctrl.services3">
+                        <div id="{{serve.id}}">
+                            <h2 ng-bind="serve.h2 | uppercase"></h2>
+                            <div class="sabout">
+                                <img ng-src="{{serve.image}}">
+                                <h4 ng-bind="serve.h4"></h4>
+                            </div>
+                            <h3 ng-bind="serve.p1"></h3>
+                            <div class="col-md-offset-1 ">
+                                <ul class="keys1">
+                                    <span ng-repeat="examp in serve.offers2">
+                                        <li>{{examp.name}}</li>
+                                    </span>
+                                </ul>
+                            </div>
+                            <h3 ng-bind="serve.p2"></h3>
+                            <div class="col-md-offset-1 ">
+                                <ul class="keys1">
+                                    <span class="dif1" ng-repeat="proj in serve.projects2">
+                                        <li>{{proj.name1}}</li>
+                                    </span>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>         
+                </div>
+            </div>
+        </div>
+        <a href="#contactus"><button class="btn floater float-btn">Contact Us</button></a>
+    </section>
+    <hr>
+    <!--================service area 1=================-->
+
+   

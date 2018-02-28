@@ -1,0 +1,142 @@
+    <!--================banner Area =================-->
+    <section id="hello">
+        <div class="bannerabt">
+            <h3>About Us</h3>
+        </div>
+    </section>
+
+    <!--================banner Area =================-->
+
+    <!--================Pragyawan at glance =================-->
+    <section id="pag">
+        <div ng-controller="pagController as pctrl">
+            <div class="container">
+                <div class="lefttitle">
+                    <h2 ng-bind="pctrl.head"></h2>
+                    <p ng-bind="pctrl.para1"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container">
+                    <div class="col-md-4 glance" ng-repeat="item in pctrl.items">
+                        <img ng-src="{{item.image}}">
+                        <h2 ng-bind="item.h2"></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="branches">
+                    <h3 ng-bind="pctrl.para3"></h3>
+                    <div class="col-md-offset-4">
+                        <ul>
+                            <span ng-repeat="branch in pctrl.ourbranches">
+                                 <li class="pbranch"><img src="img/icon/arrowright.png"> <p>{{branch.abt}}</p> </li>
+                            </span>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h3 class="umberella" ng-bind="pctrl.para4"></h3>
+                    <div class="col-md-6">
+                        <p class="pagepara" ng-bind="pctrl.para2"></p>
+                    </div>
+                    <div class="col-md-offset-2 col-md-4 ">
+                        <img class="pagimg" ng-src="{{pctrl.image2}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!--================Pragyawan at glance =================-->
+
+    <!--================our mission =================-->
+    <section id="banners">
+        <div ng-controller="aboutController as actrl">   
+            <div class="container">
+                <div class="lefttitle">
+                    <h2 ng-bind="actrl.head"></h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-offset-3">
+                        <div class=" col-md-8" ng-repeat="item in actrl.mission">
+                            <div class="inside">
+                                <p ng-bind="item.text"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ab2">
+                    <h3>500+ clients across the globe have been associated with us and counting...</h3>
+                    <div class="row">
+                        <div class="col-md-3" ng-repeat="item in actrl.stat">
+                            <div class="stats">
+                                <h4 ng-bind="item.count"></h4>
+                                <p>{{item.p1}}<br>{{item.p2}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ab3">
+                    <a href="#contactus"><button class="btn float-btn">Contact Us</button></a>
+                    <h3>Need Any Assistance?</h3>
+                </div>
+                <div class="lquote">
+                    <img src="img/icon/leftquote.png">
+                </div>
+                <div class="rquote">
+                    <img src="img/icon/rightquote.png">
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!--================our mission =================-->
+
+    <!--================team =================-->
+    <section id="team">
+        <div ng-controller="teamController as tctrl">
+            <div class="container">
+                <div class="lefttitle">
+                    <h2 ng-bind="tctrl.head"></h2>
+                    <p ng-bind="tctrl.para"></p>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 bord" ng-repeat="member in tctrl.members track by $index">
+                        <div ng-click="member.show = !member.show ">
+                            <button id="round-{{$index}}" class="round" ng-click="showHide($index)"><img id="direction-{{$index}}" src="img/icon/uparrow.png"></button>
+                        </div>
+                        <img ng-src="{{member.image}}">
+                        <div ng-hide="member.show" class="memberabout" >
+                            <h3 ng-bind="member.title"></h3>
+                            <h2 ng-bind="member.name"></h2>     
+                        </div>            
+                        <div ng-show="member.show" class="hid" >
+                            <p ng-bind="member.about"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!--================team =================-->
+
+    
+    <!--================Pragyawan brief history =================-->
+    <section id="pbh">
+        <div ng-controller="pbhController as hctrl">
+            <div class="container">
+                <div class="lefttitle">
+                    <h2 ng-bind="hctrl.head"></h2>
+                </div>
+                <div class="history-info">
+                    <img ng-src="{{hctrl.image}}">
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!--================Pragyawan brief history =================-->
+

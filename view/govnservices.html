@@ -1,0 +1,82 @@
+    <!--================products section =================-->
+    <section id="prods">
+        <div ng-controller="productController as pctrl">
+            <div class="container">
+                <div class="lefttitle">
+                    <h2>{{pctrl.head}}</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 col-xs-12 products" ng-repeat="item in pctrl.products">
+                        <center><img ng-src="{{item.image}}"></center>
+                        <h4>{{item.h1}}</h4>
+                        <p>{{item.p1}}<br>{{item.p2}}</p>
+                        <h4>Key Features</h4>
+                        <ul class="pul">
+                            <span ng-repeat="prod in item.feature">
+                                <li>{{prod.name}}</li>
+                                <ul class="puls">
+                                    <span ng-repeat="load in prod.keys">
+                                        <li>{{load.names}}</li>
+                                    </span>
+                                </ul>
+                            </span>
+                        </ul>
+                        <div class="partnered">
+                            <h3>Our Key Trade Partners</h3>
+                            <p>COSHIP Mobile, NT more, ZTE, Haier</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-4 col-xs-12 products" ng-repeat="item in pctrl.products2">
+                        <center><img ng-src="{{item.image}}"></center>
+                        <h4>{{item.h1}}</h4>
+                        <p>{{item.p1}}<br>{{item.p2}}</p>
+                        <h4>Key Features</h4>
+                        <ul class="pul">
+                            <span ng-repeat="prod in item.feature">
+                                <li>{{prod.name}}</li>
+                                <ul class="puls">
+                                    <span ng-repeat="load in prod.keys">
+                                        <li>{{load.names}}</li>
+                                    </span>
+                                </ul>
+                            </span>
+                        </ul>
+                        <div class="partnered1">
+                            <h3>Our Key Trade Partners</h3>
+                            <p>COSHIP Mobile, NT more, ZTE, Haier</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-4 col-xs-12 products" ng-repeat="item in pctrl.products3">
+                        <center><img ng-src="{{item.image}}"></center>
+                        <h4>{{item.h1}}</h4>
+                        <p>{{item.p1}}<br>{{item.p2}}</p>
+                        <h4>Key Features</h4>
+                        <ul class="pul">
+                            <span ng-repeat="prod in item.feature">
+                                <li>{{prod.name}}</li>
+                                <ul class="puls">
+                                    <span ng-repeat="load in prod.keys">
+                                        <li>{{load.names}}</li>
+                                    </span>
+                                </ul>
+                            </span>
+                        </ul>
+                        <div class="partnered3">
+                            <h3>Our Key Trade Partners</h3>
+                            <p>COSHIP Mobile, NT more, ZTE, Haier</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#contactus"><button class="btn floater float-btn">Contact Us</button></a>
+    </section>
+    <hr>
+    <!--================products section =================-->
